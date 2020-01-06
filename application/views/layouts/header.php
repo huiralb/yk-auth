@@ -48,7 +48,7 @@
             <div data-original-title="Toggle Navigation" data-placement="right" class="fa fa-bars tooltips"></div>
         </div>
         <!--logo start-->
-        <a href="<?=base_url()?>" class="logo" >eBudgeting<span> RSUD Soewondo Pati </span> </a> 
+        <a href="<?=base_url()?>" class="logo" >YK<span> Auth </span> </a> 
         <!--logo end-->
         
         <div class="top-nav ">
