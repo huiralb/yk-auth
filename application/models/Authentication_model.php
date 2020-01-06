@@ -40,7 +40,6 @@ class Authentication_model extends CI_Model {
         );
         $this->db->select('*', FALSE);
         $this->db->from('yk_user');
-        $this->db->join('mst_unit_kerja', 'UserUnitKerjaId=UnitKerjaId', 'left');
         $this->db->where($param);
         $query = $this->db->get();        
         $result = $query->result_array();

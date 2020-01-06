@@ -34,18 +34,8 @@
     <form class="form-signin" action="<?=site_url('login_do/login')?>" method="POST">
     <h2 class="form-signin-heading">silahkan login</h2>
     <div class="login-wrap">
-        <input type="text" name="username" class="form-control" placeholder="User ID" autofocus>
+        <input type="text" name="username" class="form-control" placeholder="Username" autofocus>
         <input type="password" name="password" class="form-control" placeholder="Password">
-        <label class="control-label">Pilih Tahun</label>
-        <select class="form-control" id="tahun" name="tahun" style="font-size: 12px;">
-            <?php
-                for($i=2018; $i<=2023;$i++) {
-            ?>
-                <option <?= date('Y') == $i ? 'selected' : ''?> value="<?= $i ?>" > <?= $i ?></option>
-            <?php
-                }
-            ?>
-        </select>
         <br>
         <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
         

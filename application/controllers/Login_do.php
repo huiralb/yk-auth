@@ -24,13 +24,9 @@ class Login_do extends CI_Controller {
         
         $data = $this->authentication_model->getUserByUserPassword($_POST['username'], sha1($_POST['password']));
         if (sizeof($data) > 0) {            
-            $_SESSION['blud']['ta'] = $_POST['tahun'];
             $_SESSION['blud']['userid'] = $data['UserId'];
             $_SESSION['blud']['username'] = $data['UserName'];
             $_SESSION['blud']['realname'] = $data['UserRealName'];
-            $_SESSION['blud']['tahunanggaran'] = $_POST['tahun'];            
-            $_SESSION['blud']['idunitkerja'] = $data['UserUnitKerjaId'];
-            $_SESSION['blud']['namaunitkerja'] = $data['UnitKerjaNama'];  
             return TRUE;
         } else {
             $this->form_validation->set_message("validate", "Nama Pengguna atau Kata Sandi salah.");
